@@ -13,6 +13,7 @@ public class SpringbootApplicationTests {
     @Test
     public void contextLoads() {
         int a=4;
+        String b="cc";
     }
 
 }
