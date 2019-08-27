@@ -124,7 +124,7 @@ git+github的完整使用步骤:
    重复 3  4  7 步骤
    git add .
    git commit -m '添加index.js'
-   git push -u origin master
+   git push -u origin master <br>
 10.更新项目
 git pull origin master
 </h4>
