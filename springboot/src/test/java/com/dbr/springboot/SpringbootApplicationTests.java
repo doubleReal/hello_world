@@ -14,6 +14,8 @@ public class SpringbootApplicationTests {
     public void contextLoads() {
         int a=4;
         String b="cc";
+        float c=1.15f;
+        int ss=15;
         Long d=16L;
     }
 
