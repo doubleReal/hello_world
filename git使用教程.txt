@@ -1,0 +1,124 @@
+<h4>
+记录下git和github的操作:
+1. 了解git一些常见命令
+   1. git add 
+   2. git commit 
+   3. git log
+   4. git status
+   5. git reset
+   6. git init 
+​
+2. 安装git环境（安装了环境之后才可以使用git命令来管理源代码） 
+  1. 需要先安装 Git-2.13.0-64-bit.exe  
+  2. 双击打开安装包一路下一步
+  3. 测试是否安装成功 在桌面任意空白处右键出现git bash here 表示成功
+​
+3. 配置当前git用户和邮箱
+  1. git是在本地进行源代码版本管理 （就需要一个本地管理代码的账户（用户））
+  2. 配置当前git用户 （如果不配置用户和邮箱是无法使用git来管理）
+  3. 配置命令 打开git bash黑窗 分别执行
+    git config  --global user.name 名字 (取个名字)
+    git config  --global user.email  邮箱(个人的邮箱)
+  4. 验证用户是否配置成功
+    打开C盘 》 用户 》 当前你登录的用户 》 .gitconfig文件  (可以打开当前文件修改用户和邮箱)
+
+ 1. 创建一个本地的文件夹（项目的文件夹里面包含了项目的源代码）  项目文件夹
+2. 在当前文件夹下去初始化一个git的仓库（可以被git管理）
+   进入项目 》 右键打开git bash here
+   输入 git init  回车
+   完成后 在当前项目里面会有一个.git文件夹 记录当前本地仓库（如果看不到需要勾上显示隐藏文件）
+   https://jingyan.baidu.com/article/af9f5a2dc1f91243150a4553.html
+   https://jingyan.baidu.com/article/ab69b27091fb1c2ca7189fed.html
+​
+3. 把当前项目需要被管理的源代码文件和文件夹 添加到本地仓库
+  输入 git add 文件名.后缀名  回车
+  输入完成后没有出现报错就是成功
+  如果文件很多 都需要添加 
+  输入 git add .  回车    .和add之间有空格
+4. 验证当前添加是否成功
+  输入 git status  回车
+​
+  1.  绿色状态  new file  当前新的文件被添加
+  2.  红色状态 警告  有文件没有被添加到git仓库管理
+5. 把当前暂存区添加的文件 提交到本地仓库（提交后就表示创建了一个代码的版本）
+  输入 git commit -m '提交日志'
+  提交完成后就会把代码提交到.git文件夹（git仓库） 并且会自动创建一个代码的版本
+  [master (root-commit) d6f5a75]     d6f5a75当前提交的版本号
+​
+6. 查看当前本地仓库的提交日志 
+  输入 git log  
+  查看当前提交了几次 分别什么时候提交 提交的版本号等信息
+  commit d6f5a75b8d27d71412a523a5de55c6c62c400f6c (HEAD -> master)  完整版本号
+  Author: zhengwei <228197155@qq.com>    作者（配置的用户）
+  Date:   Wed Jun 6 11:31:33 2018 +0800    提交时间
+​
+      2018-06-06-11-31第一次提交到本地仓库    提交的日志
+ 
+7. 后续如果添加文件   （add  commit 是一起的 只有代码有更改都要再次执行）
+    1. 再把新增的文件 添加到暂存区 git add .
+    2. 把暂存区的文件 提交到本地仓库 git commit -m '再次输入提交日志'
+    3. 执行完后后 git log查看日  会显示所有提交的日志 会按照从新到旧显示
+​
+8. 后续如果修改了已经被管理的文件
+     1. git status   可以查看当前版本的状态
+        modified:  表示当前的文本代码被更改了
+           红色表示更改了但是未添加 
+           绿色表示当前文件更改已经添加 但是未提交
+     2. 如果红色没有添加 git add .
+     3. 如果绿色没有提及 git commit -m '提交日志'
+​
+9. 如果需要知道修改了什么代码 
+  输入 git diff查看当前代码 和 修改之前的版本库代码的对比
+  可以看到当前修改了那个文件  修改了哪一行代码 -表示之前的代码 + 表示修改后的代码
+  如果修改后又撤回了 无法看到变化
+​
+10. 如果需要回到上一个版本的代码    
+  输入 git reset  --hard HEAD^
+​
+  注意回退是不可逆的 新写的代码就没了 
+  如果你写了很多代码但是出了问题短时间找不到需要回退
+  1. 把新写的代码备份一下
+  2. 再执行回退代码来回退版本
+​
+  还可以使用指定的版本回退
+​
+  git reset --hard 版本号
+​
+  git reflog 查看版本号
+​
+  例如 git reset --hard a4a3ae9 
+
+  12. 总结
+      1. git init 初始化本地仓库
+      2. git add . 添加要管理的代码（当前的代码才能被git管理）
+      3. git commit -m '提交日志' 把暂存区的文件去提交到git仓库
+      4. git status 查看状态
+      5. git log 查看提交日志
+      6. git diff 查看代码修改
+      7. git reset --hard 版本回退
+      8. git reflog 查看所有版本号
+      9. git reset --hard HEAD^  git reset --hard 版本号   可以回退到上一个版本 或者指定版本
+        如果当前最新的代码没有提交马上回退 当前最新代码就没有了
+        如果当前最新代码提交了但是再次回退 当前最新的代码还能找到
+ 
+git+github的完整使用步骤:
+1. 创建一个项目文件夹 letao项目2
+2. 当前项目创建一个本地仓库  git init 
+3. 把当前项目源代码添加到暂存区 git add .
+4. 把暂存区的代码提交到本地仓库 git commit -m '提交日志'
+5. 去github创建一个服务器仓库 点击头像 》 your profile 》 点击respositories 》点击new 新建仓库 》 输入仓库名点击确定
+6. 指定当前本地仓库要关联的服务器仓库
+  git remote add origin https://github.com/tu0415/my-letao
+  指定远程服务器仓库的地址
+7. 把当前本地仓库的代码提交到服务器仓库里面
+  git push -u origin master
+  把本地仓库的源代码 推送到远程的master
+8. 提交完成后在github服务器上就能看到你提交的代码
+9. 如果后面再次添加代码
+   重复 3  4  7 步骤
+   git add .
+   git commit -m '添加index.js'
+   git push -u origin master <br>
+10.更新项目
+git pull origin master
+</h4>
