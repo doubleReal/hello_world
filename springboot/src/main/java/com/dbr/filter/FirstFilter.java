@@ -24,7 +24,7 @@ import java.io.IOException;
  **/
 //常用filter过滤
 //@WebFilter(filterName = "FirstFilter",urlPatterns = {"*.jsp","*.do"})
-@WebFilter(filterName = "FirstFilter",urlPatterns = "/firstFilter")
+@WebFilter(filterName = "FirstFilter",urlPatterns = "/first")
 public class FirstFilter implements Filter {
     private Logger logger= LoggerFactory.getLogger(FirstFilter.class);
     @Override
@@ -43,4 +43,5 @@ public class FirstFilter implements Filter {
     public void destroy() {
 
     }
+
 }
