@@ -75,9 +75,14 @@
             <artifactId>jsp-api</artifactId>
             <version>2.2</version>
         </dependency>
-        <dependency>
+        <!--freemaker现在使用的少-->
+        <!--<dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-freemarker</artifactId>
+        </dependency>-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
     </dependencies>
 
