@@ -1,0 +1,7 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dbr.dao.SqlUserDao">
+    <insert id="insertUser" parameterType="com.dbr.pojo.SqlUsers">
+        insert into users(name,age) values(#{name},#{age}) </insert>
+</mapper>

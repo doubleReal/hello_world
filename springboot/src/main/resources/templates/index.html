@@ -43,5 +43,65 @@
     <hr>
     <span th:text="${#dates.day(key)}"></span>
     <hr>
+    <span th:if="${sex}=='男'">
+        性别:男
+    </span>
+    <span th:if="${sex}=='女'">
+        性别:女
+    </span><hr>
+    <div th:switch="${id}">
+        <span th:case="1">ID为1</span>
+        <span th:case="2">ID为2</span>
+        <span th:case="3">ID为3</span>
+    </div><hr>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        <tr th:each="u,var : ${list}">
+            <td th:text="${u.userId}"></td>
+            <td th:text="${u.userName}"></td>
+            <td th:text="${u.userAge}"></td>
+            <td th:text="${var.index}"></td>
+            <td th:text="${var.count}"></td>
+            <td th:text="${var.size}"></td>
+            <td th:text="${var.even}"></td>
+            <td th:text="${var.odd}"></td>
+            <td th:text="${var.first}"></td>
+            <td th:text="${var.last}"></td>
+        </tr>
+    </table><hr>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        <tr th:each="maps : ${map}">
+            <td th:text="${maps}"></td>
+        </tr>
+    </table>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        <tr th:each="maps :${map}">
+            <td th:each="entry:${maps}" th:text="${entry.value.userId}"></td>
+            <td th:each="entry:${maps}" th:text="${entry.value.userName}"></td>
+            <td th:each="entry:${maps}" th:text="${entry.value.userAge}"></td>
+        </tr>
+    </table><hr>
+    Request:<span th:text="${#httpServletRequest.getAttribute('req')}"></span><br>
+    Session:<span th:text="${session.sess}"></span><br/>
+    Application:<span th:text="${application.app}"></span><hr>
+    <a th:href="@{http://www.baidu.com}">绝对路径</a><br>
+    <a th:href="@{/show}">相对路径</a>
+    <a th:href="@{~/project2/resourcename}">相对于服务器的根</a>
+    <a th:href="@{/show(id=1,name=zhagnsan)}">相对路径-传参</a>
+    <a th:href="@{/path/{id}/show(id=1,name=zhagnsan)}"> 相对路径- 传参 -restful</a>
 </body>
 </html>
