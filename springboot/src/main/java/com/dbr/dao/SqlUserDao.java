@@ -1,6 +1,8 @@
 package com.dbr.dao;
 
 import com.dbr.pojo.SqlUsers;
+import org.apache.ibatis.annotations.Mapper;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -12,7 +14,6 @@ import org.springframework.stereotype.Repository;
  * @author zhaozheng
  * @since
  **/
-@Repository
 public interface SqlUserDao {
     public void insertUser(SqlUsers sqlUsers) throws Exception;
 }
