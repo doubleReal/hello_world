@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>轮播器</title>
+<link href="../static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<script src="../static/js/jquery.min.js"></script>
+<script src="../static/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<div class="container"><br>
+		<!--轮播器主体carousel slide,center-block表示居中显示,加上data-ride="carousel"让轮播器每隔5秒自动切换-->
+		<div class="carousel slide center-block" id="myCarousel" style="width: 900px;">
+<!--
+			ol代表下面的小圆点,data-slide-to="0"代表选中哪一区域,active代表选中
+-->
+			<ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="1"></li>
+				<li data-target="#myCarousel" data-slide-to="2"></li>
+			</ol>
+			
+			<!--轮播器内容-->
+			<div class="carousel-inner">
+				<div class="item active">
+					<img src="../bootstrap/bootstrap/23/images/1.svg" alt="">
+					<!--在轮播器图片里加上标题与内容-->
+					<div class="carousel-caption">
+						<h3>标题信息</h3>
+						<p>说明内容说明内容说明内容</p>
+					</div>
+				</div>
+				<div class="item">
+					<img src="../bootstrap/bootstrap/23/images/2.svg" alt="">
+				</div>
+				<div class="item">
+					<img src="../bootstrap/bootstrap/23/images/3.svg" alt="">
+				</div>
+			</div>
+			<!--轮播器两个滑动条,代表左右两边-->
+			<a href="#myCarousel" class="left carousel-control" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left"></span>
+			</a>
+			<a href="#myCarousel" class="right carousel-control" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right"></span>
+			</a>
+		</div>
+		<p>
+			<button class="btn btn-primary" id="btn">第三张</button>
+		</p>
+	</div>
+	<script>
+		/*通过JS实现自动播放*/
+		$("#myCarousel").carousel({
+			interval:2000,	/*播放间隔2秒*/
+			wrap:true	/*是否无限循环*/
+		}).on('slide.bs.carousel',function(){
+			alert("slide");	/*监听事件,切换之前*/
+		}).on('slid.bs.carousel',function(){
+			alert("slid");		/*监听事件,切换之后*/
+		})
+		
+		/*通过按钮控制跳转到哪一页*/
+		$("#btn").click(function(){
+			$("#myCarousel").carousel(2);
+		});
+	</script>
+</body>
+</html>

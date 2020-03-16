@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>下拉菜单</title>
+<link href="../static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<script src="../static/js/jquery.min.js"></script>
+<script src="../static/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<div class="container"><br>
+		<div id="mydrp" class="dropdown"> <!--下拉菜单class dropdown-->
+			<button id="btn" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+				下拉菜单
+				<span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu">
+				<li><a href="###">aaa</a></li>
+				<li><a href="###">bbb</a></li>
+				<li><a href="###">ccc</a></li>
+			</ul>
+		</div>
+	</div>
+	<script>
+		//$('#btn').dropdown('toggle');
+		$("#mydrp").on('show.bs.dropdown',function(){
+			alert("show");
+		});
+	</script>
+</body>
+</html>
+ 

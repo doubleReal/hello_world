@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>弹出框&警告框</title>
+<link href="../static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<script src="../static/js/jquery.min.js"></script>
+<script src="../static/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<div class="container"><br>
+		<!--data-content表示弹出框内容,data-animation表示淡入淡出,data-delay代表延迟,data-html是否解析html,data-placement表示弹出框显示的方向,data-title显示标题,优先级低于title,data-trigger触发方式,默认为点击-->
+		<!--<button class="btn btn-danger" title="对面的<b>女孩</b>看过来" data-toggle="popover"
+				data-content="对面的<i>女孩</i>看过来,看过来,看过来" data-animation="true" data-delay="10"
+				data-html="true" data-placement="bottom" data-title="我的标题" data-trigger="hover">显示/隐藏弹出框</button>-->
+		
+		<p><button class="btn btn-danger" title="对面的<b>女孩</b>看过来" data-toggle="popover"
+				data-content="对面的<i>女孩</i>看过来,看过来,看过来" >显示/隐藏弹出框</button>
+			</p>
+		<p>
+			<button class="btn btn-default" id="btn">toggle</button>
+		</p>
+		
+		<!--警告框实现,fade,in实现淡入淡出效果-->
+		<div class="alert alert-danger fade in" id="myalert">
+			<button class="close" data-dismiss="alert">&times;</button> <!--表示x并关闭显示框-->
+			您确定删除该商品吗?
+		</div>
+		<p>
+			<button class="btn btn-default" id="closeAlert">close</button>
+		</p>
+	</div>
+	<script>
+		/*需通过JS进行调用才能生效,和第一个注释的按钮相匹配*/
+		//$('[data-toggle="popover"]').popover();
+		
+		//用JS来控制属性
+		var popover=$('[data-toggle="popover"]')
+		popover.popover({
+			html:true,
+			delay:{show:1000,hide:0}
+		}).on('show.bs.popover',function(){	//监听事件
+			alert("show");
+		})
+		//通过按钮控制
+		$("#btn").click(function(){
+			popover.popover('toggle');
+		});
+		//通过Js将提示框关闭
+		$("#closeAlert").click(function(){
+			$("#myalert").alert('close');
+		});
+		//监听事件,一个是关闭之前,一个是关闭之后
+		$("#myalert").on('close.bs.alert',function(){
+			alert("close")
+		}).on('close.bs.alert',function(){
+			alert("closed")
+		})
+	</script>
+</body>
+</html>

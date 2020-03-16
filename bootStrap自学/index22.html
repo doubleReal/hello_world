@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>折叠</title>
+<link href="../static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<script src="../static/js/jquery.min.js"></script>
+<script src="../static/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<div class="container"><br>
+<!--
+		well是样式,collapse隐藏当前内容,data-toggle="collapse",data-target="#box"实现折叠效果
+-->
+		<button class="btn btn-primary" data-toggle="collapse" data-target="#box">button</button>
+		<!--将按钮换成a标签是一样的效果-->
+		<a class="btn btn-primary" data-toggle="collapse" href="#box">button</a>
+		<div class="well collapse" id="box">
+			content<br>content<br>content<br>content<br>
+		</div>
+		<p>
+			<button class="btn btn-default" id="btn_toggle">toggle</button>
+		</p>
+		<br><br><br><br><br>
+		<!--实现多个折叠框,一个出现其他全部隐藏-->
+		<div class="panel-group" id="pbox">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a href="#box1" data-toggle="collapse" data-parent="#pbox">选项一</a> <!--data-toggle="collapse"实现折叠,data-parent="#pbox"实现只有一个出现,其他隐藏-->
+					</h4>
+				</div>
+				<div class="collapse panel-collapse in" id="box1">	<!--collapse panel-collapse隐藏,in默认显示-->
+				<div class="panel-body">
+					选项一的内容<br>选项一的内容<br>选项一的内容<br>
+				</div>
+					</div>
+			</div>
+			
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a href="#box2" data-toggle="collapse" data-parent="#pbox">选项二</a>
+					</h4>
+				</div>
+				<div class="collapse panel-collapse" id="box2">
+				<div class="panel-body">
+					选项二的内容<br>选项二的内容<br>选项二的内容<br>
+				</div>
+					</div>
+			</div>
+			
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a href="#box3" data-toggle="collapse" data-parent="#pbox">选项三</a>
+					</h4>
+				</div>
+				<div class="collapse panel-collapse" id="box3">
+				<div class="panel-body">
+					选项三的内容<br>选项三的内容<br>选项三的内容<br>
+				</div>
+					</div>
+			</div>
+		</div>
+		
+	</div>
+	<script>
+		/*用JS来实现同样的效果*/
+		$("#btn_toggle").click(function(){
+			$("#box").collapse('toggle');
+		});
+		/*监听事件,显示时提示*/
+		$("#box").on('show.bs.collapse',function(){
+			alert("show");
+		})
+	</script>
+</body>
+</html> 

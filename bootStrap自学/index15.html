@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>模态框</title>
+<link href="../static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<script src="../static/js/jquery.min.js"></script>
+<script src="../static/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<div class="container"><br/>
+	<div class="modal fade" tabindex="-1" id="myModal">	<!--tabindex="-1"可以使用esc关闭,fade添加淡入淡出动画效果-->	
+		<div class="modal-dialog"> <!--模态框默认隐藏,添加show可以显示,modal-lg,modal-sm表示大小-->
+			<div class="modal-content">
+				<div class="modal-header"> <!--模态框头部-->
+					<button class="close" data-dismiss="modal">&times;</button><!--	关闭模态框的x-->
+					<h4 class="modal-title">
+					标题信息
+					</h4>
+				</div>
+				<div class="modal-body">
+					<!--对面的女孩看过来
+					<div class="row">
+						<div class="col-md-4">444</div>
+						<div class="col-md-8">888</div>
+					</div>-->
+					<form action="">
+						<div class="form-group">
+							<label>用户名</label>
+							<input type="text" class="form-control">
+						</div>
+						<div class="form-group">
+							<label>密码</label>
+							<input type="password" class="form-control">
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button class="btn btn-primary">确认</button>
+					<button class="btn btn-default" data-dismiss="modal">取消</button>
+				</div>
+			</div>
+		</div>
+		</div>
+		<!--data-keyboard="false"禁止使用键盘--> <!--调用模态框,按钮显示-->
+		<!--<button class="btn btn-primary" data-toggle="modal" data-target="#myModal" data-backdrop="static" >模态框</button>
+		<a href="javascript:alert(1);">aaa</a>-->
+		
+		<!--javascript显示-->
+		<button class="btn btn-primary" id="btn_show">show</button>
+		<button class="btn btn-primary" id="btn_hide">hide</button>
+		<button class="btn btn-primary" id="btn_toggle">toggle</button>
+		<script>
+		$(function(){
+			var myModal=$("#myModal");
+			myModal.modal({		/*禁止使用键盘取消*/
+				show:false,
+				backdrop:'static',
+				keyboard:false
+			})
+			/*事件监听,显示前,显示时,隐藏前,隐藏时*/
+			.on('show.bs.modal',function(){
+				 alert('show')
+			})
+			.on('shown.bs.modal',function(){
+				alert('shown')
+			})
+			.on('hide.bs.modal',function(){
+				alert('hide')
+			})
+			.on('hidden.bs.modal',function(){
+				alert('hidden')
+			});
+			
+			$("#btn_show").click(function(){
+				myModal.modal("show");
+			});
+			$("#btn_hide").click(function(){
+				myModal.modal("hide");
+			});
+			$("#btn_toggle").click(function(){
+				myModal.modal("toggle"); /*隐藏的显示,显示的隐藏*/
+			});
+		});
+		</script>
+	</div>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>表单和图片</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+</head>
+    <body>
+        <div class="container">
+            <!--<form action="">
+&lt;!&ndash;
+                type为text或者password时,div.class用form-group,input用form-control占一列
+&ndash;&gt;
+                <div class="form-group">
+                    <label for="email">邮箱</label>
+                    <input type="text" id="email" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="password">密码</label>
+                    <input type="password" id="password" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="file">文件</label>
+                    <input type="file" id="file">
+                    <p class="help-block">上传.jpg,.jpeg,png,gif格式的图片</p>   &lt;!&ndash;说明性的小写文字用help-block&ndash;&gt;
+                </div>
+                <div class="checkbox">             &lt;!&ndash; checkbox用checkbox&ndash;&gt;
+                    <label>
+                        <input type="checkbox">保持登录
+                    </label>
+                </div>
+                <div class="radio">                    &lt;!&ndash;radio用radio&ndash;&gt;
+                    <label>
+                        <input type="radio">男
+                    </label>
+                    <label>
+                        <input type="radio">女
+                    </label>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-default" value="提交">
+                </div>
+            </form>-->
+
+           <!-- <form class="form-inline">    使PC端的表单横向排列
+                <div class="form-group">
+                    <label for="email">用户名</label>
+                    <input type="text" id="email" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="password">密码</label>
+                    <input type="password" id="password" class="form-control">
+                </div>
+                <div class="form-group form-group-lg">   form-group-lg表单变大,也可变小
+                    <div class="input-group">
+                        <div class="input-group-addon">$</div>    input-group-addon在输入框附件添加文字或符号
+                        <input type="password"  class="form-control">
+                        <div class="input-group-addon">.00</div>
+                    </div>
+                </div>
+                <button class="btn btn-primary">登陆</button>
+            </form>-->
+
+           <!-- <form class="form-horizontal">                  &lt;!&ndash;主类form-horizontal&ndash;&gt;
+
+              &lt;!&ndash; <fieldset disabled> &ndash;&gt;                 &lt;!&ndash;可以禁用包裹的控件&ndash;&gt;
+                <div class="form-group">
+                    <label  class="control-label col-sm-2">用户名</label>       &lt;!&ndash;col-sm-2调整距离&ndash;&gt;
+                    <div class="col-sm-4">
+                        <input type="text"  class="form-control">
+                        <p class="help-block">请出入您的用户名</p>                  &lt;!&ndash;备注说明&ndash;&gt;
+                    </div>
+                </div>
+                   <div class="form-group disabled">
+                       <label  class="control-label col-sm-2">用户名</label>       &lt;!&ndash;col-sm-2调整距离&ndash;&gt;
+                       <div class="col-sm-4">
+                           <input type="text"  class="form-control" disabled>
+                       </div>
+                   </div>
+                   <div class="form-group">
+                       <label  class="control-label col-sm-2">用户名</label>       &lt;!&ndash;col-sm-2调整距离&ndash;&gt;
+                       <div class="col-sm-4">
+                           <input type="text"  class="form-control" readonly>
+                       </div>
+                   </div>
+                <div class="form-group">
+                    <label for="password" class="control-label col-sm-2">密码</label>
+                    <div class="col-sm-4">
+                    <input type="password" id="password" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password" class="control-label col-sm-2">文本框</label>
+                    <div class="col-sm-4">
+                       <textarea class="form-control"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="checkbox col-sm-4 col-sm-offset-2">
+                       <label>
+                           <input type="checkbox">记住我
+                       </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-4 col-sm-offset-2">
+                <button class="btn btn-primary">登陆</button>
+                    </div>
+                </div>
+               &lt;!&ndash;</fieldset>&ndash;&gt;
+            </form>-->
+
+            <!--<div class="checkbox">                  &lt;!&ndash;checkbox类型,竖直排列则需要在每个列加上<div class="checkbox">&ndash;&gt;
+                <label class="checkbox-inline">         &lt;!&ndash;横向排列加上class="checkbox-inline更美观&ndash;&gt;
+                    <input type="checkbox" name="chk[]">苹果
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" name="chk[]" >梨子
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" name="chk[]" >橘子
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" name="chk[]">苹果
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" name="chk[]">梨子
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" name="chk[]">橘子
+                </label>
+            </div>-->
+
+            <!--<div class="radio">                         &lt;!&ndash;radio排列,横向排列需加class="radio-inline"更美观&ndash;&gt;
+                <label class="radio-inline">
+                    <input type="radio" name="chk[]">苹果
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="chk[]">梨子
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="chk[]">橘子
+                </label>
+            </div>
+                <div class="radio">
+                    <label class="disabled">                        &lt;!&ndash;disabled不能点击&ndash;&gt;
+                        <input type="radio" name="chk[]" disabled>苹果
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="chk[]">梨子
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="chk[]">橘子
+                    </label>
+                </div>-->
+
+            <!--<select class="form-control" multiple>       &lt;!&ndash;select格式,multiple代表多选&ndash;&gt;
+                <option value="">aaa</option>
+                <option value="">bbb</option>
+                <option value="">ccc</option>
+            </select>
+
+
+            <p class="form-control-static">123@123.com</p>     &lt;!&ndash;静态文字&ndash;&gt;-->
+
+            <form action="">
+
+                <div class="form-group has-success">            <!--has-success,has-error,has-warning代表不太的框颜色,input与checkbox都可用-->
+                    <label for="email">邮箱</label>
+                    <input type="text" id="email" class="form-control">
+                </div>
+                <div class="form-group has-error has-feedback">            <!--加入has-feedback添加框后图标,必须先加这个-->
+                    <label >密码</label>
+                    <input type="password"  class="form-control "> <!--class.input-lg为大号输入框-->
+                    <span class="glyphicon glyphicon-ok form-control-feedback"></span>      <!--glyphicon glyphicon-ok form-control-feedback代表框后图标,下面同理-->
+                </div>
+                <div class="form-group has-success has-feedback">
+                    <label >密码</label>
+                    <input type="password"  class="form-control ">
+                    <span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
+                </div>
+                <div class="form-group form-group-lg has-success has-feedback">
+                    <label >密码</label>
+                    <div class="input-group">       <!--input-group,input-group-addon加入框前图标或文字-->
+                        <div class="input-group-addon">
+                            @
+                        </div>
+                        <input type="password"  class="form-control ">
+                    </div>
+                    <p class="help-block">请输入邮箱</p>
+                    <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+                </div>
+                <div class="form-group">
+                    <label for="file">文件</label>
+                    <input type="file" id="file">
+                    <p class="help-block">上传.jpg,.jpeg,png,gif格式的图片</p>
+                </div>
+                <div class="checkbox has-warning">
+                    <label>
+                        <input type="checkbox">保持登录
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio">男
+                    </label>
+                    <label>
+                        <input type="radio">女
+                    </label>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-default" value="提交">
+                </div>
+            </form>
+            
+        </div>
+    </body>
+</html>

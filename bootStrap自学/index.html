@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>栅格&网络</title>
+<link href="../OneDrive/桌面文件/bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<style>
+/*
+		代表不同设备尺寸下字体的大小,对应手机平板PC
+*/
+		.myP{font-size: 12px;}
+		@media(min-width:768px){
+			.myP{font-size: 18px;}
+		}
+		@media(min-width:1200px){
+			.myP{font-size: 26px;}
+		}
+	</style>
+</head>
+
+<body>
+	<!--div基本组件container,默认有12列,row为行,col-md-6代表占6列-->
+<div class="container">
+	<div class="row">
+		<div class="col-md-6">aaa</div>
+		<div class="col-md-6">aaa</div>
+	</div>
+	<div class="row">
+<!--
+		lg代表PC端,sm代表平板,xs代表手机,为尺寸大小,同为12列
+-->
+		<div class="col-lg-2 col-sm-3 col-xs-6">aaa</div>
+		<div class="col-lg-2 col-sm-3 col-xs-6">aaa</div>
+		<div class="col-lg-2 col-sm-3 col-xs-6">aaa</div>
+		<!--清除浮动<div class="clearfix"></div>-->
+		<div class="col-lg-2 col-sm-3 col-xs-6">aaa</div>
+		<div class="col-lg-2 col-sm-3 col-xs-6">aaa</div>
+		<div class="col-lg-2 col-sm-3 col-xs-6">aaa</div>
+		<div class="col-lg-2 col-sm-3 col-xs-6">aaa</div>
+		<div class="col-lg-2 col-sm-3 col-xs-6">aaa</div>
+		<div class="col-lg-2 col-sm-3 col-xs-6">aaa</div>
+		<div class="col-lg-2 col-sm-3 col-xs-6">aaa</div>
+		<div class="col-lg-2 col-sm-3 col-xs-6">aaa</div>
+		<div class="col-lg-2 col-sm-3 col-xs-6">aaa</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-6">苹果50</div>
+		<div class="col-lg-6">梨60</div>
+		<!--col-md-offset-6代表挤占6列-->
+		<div class="col-md-offset-6 col-lg-6">总价110</div>
+	</div>
+	<div class="row">
+	<div class="col-lg-6">aaa</div>	
+		<div class="col-lg-6">
+			<div class="col-lg-4">bbb</div>
+			<div class="col-lg-4">bbb</div>
+			<div class="col-lg-4">bbb</div>
+		</div>
+	</div>
+	<p class="myP">你好!</p>
+	</div>
+	
+<!--<div class="container-fluid">
+	cs
+	</div>-->
+</body>
+</html>

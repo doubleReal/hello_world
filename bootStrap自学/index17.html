@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>滚动监听</title>
+<link href="../static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<script src="../static/js/jquery.min.js"></script>
+<script src="../static/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<div class="container"><br>
+		
+		<nav class="navbar navbar-default"> <!--nav为监听滚动条,默认形式-->
+			<div class="navbar-header">   <!--nav头部-->
+				<a href="" class="navbar-brand">Brand</a> <!--nav头部标题-->
+			</div>
+			<ul class="nav navbar-nav">	<!--nav头部内容-->
+				<li><a href="#html">html</a></li>	<!--指向对应的id,表示内容标题-->
+				<li><a href="#css">css</a></li>
+				<li class="dropdown"><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">javascript
+					<span class="caret"></span>
+					</a>
+				<ul class="dropdown-menu">
+					<li><a href="#vue">vue</a></li>
+					<li><a href="#react">react</a></li>
+					<li><a href="#angular">angular</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+		
+		<nav class="navbar navbar-default" id="nav2"> <!--nav为监听滚动条,默认形式-->
+			<div class="navbar-header">   <!--nav头部-->
+				<a href="" class="navbar-brand">Brand</a> <!--nav头部标题-->
+			</div>
+			<ul class="nav navbar-nav">	<!--nav头部内容-->
+				<li><a href="#html">html</a></li>	<!--指向对应的id,表示内容标题-->
+				<li><a href="#css">css</a></li>
+				<li class="dropdown"><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">javascript
+					<span class="caret"></span>
+					</a>
+				<ul class="dropdown-menu">
+					<li><a href="#vue">vue</a></li>
+					<li><a href="#react">react</a></li>
+					<li><a href="#angular">angular</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+		<!--调用JS时先不加这几个属性 data-target="#nav2"表示指定带这个ID的导航条移动 data-offset="0"表示距离  data-spy="scroll"开始滚动-->
+		<div id="box" data-target="#nav2" data-offset="0"  data-spy="scroll" style="position: relative;height: 400px;overflow-y: scroll;">	<!--nav内容,data-spy="scroll"表示上方标题随滚动条变化,定好样式才能实现点击滚动,data-offset="0"导航偏移像素-->
+			<h3 id="html">html</h3> <!--段落标题-->
+			<p>
+				html<br>html<br>html<br>html<br>html<br>html<br>html<br>html<br>html<br>html<br>
+				html<br>html<br>html<br>html<br>html<br>html<br>html<br>html<br>html<br>html<br>
+				html<br>html<br>html<br>html<br>html<br>html<br>html<br>html<br>html<br>html<br>
+			</p>
+			<h3 id="css">css</h3>
+			<p>
+			css<br>css<br>css<br>css<br>css<br>css<br>css<br>css<br>css<br>css<br>
+			css<br>css<br>css<br>css<br>css<br>css<br>css<br>css<br>css<br>css<br>
+			css<br>css<br>css<br>css<br>css<br>css<br>css<br>css<br>css<br>css<br>
+			</p>
+			
+			<h3 id="vue">vue</h3>
+			<p>
+			vue<br>vue<br>vue<br>vue<br>vue<br>vue<br>vue<br>vue<br>vue<br>vue<br>
+			vue<br>vue<br>vue<br>vue<br>vue<br>vue<br>vue<br>vue<br>vue<br>vue<br>
+			vue<br>vue<br>vue<br>vue<br>vue<br>vue<br>vue<br>vue<br>vue<br>vue<br>
+			</p>
+			
+			<h3 id="react">react</h3>
+			<p>
+			react<br>react<br>react<br>react<br>react<br>react<br>react<br>react<br>react<br>react<br>
+			react<br>react<br>react<br>react<br>react<br>react<br>react<br>react<br>react<br>react<br>
+			react<br>react<br>react<br>react<br>react<br>react<br>react<br>react<br>react<br>react<br>
+			</p>
+			
+			<h3 id="angular">angular</h3>
+			<p>
+			angular<br>angular<br>angular<br>angular<br>angular<br>angular<br>angular<br>angular<br>angular<br>angular<br>
+			angular<br>angular<br>angular<br>angular<br>angular<br>angular<br>angular<br>angular<br>angular<br>angular<br>
+			angular<br>angular<br>angular<br>angular<br>angular<br>angular<br>angular<br>angular<br>angular<br>angular<br>
+			</p>
+		</div>
+	</div>
+	<script>
+		/*$("#box").scrollspy({
+			target:"#nav2",
+			offset:0
+		});*/
+		/*表示移动到对应条目时监听事件*/
+		$('#nav2').on('activate.bs.scrollspy',function(){
+			alert("新条目被激活");
+		});
+	</script>
+</body>
+</html>

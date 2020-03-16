@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>导航栏</title>
+<link rel="stylesheet" href="../static/css/bootstrap.min.css"></head>
+<script src="../static/js/jquery.min.js"></script>
+<script src="../static/js/bootstrap.min.js"></script>
+	<style>
+		body{padding-top: 50px;}  		/*防止导航栏遮住body*/
+	</style>
+</head>
+
+<body>
+	<nav class="navbar navbar-inverse navbar-static-top navbar-fixed-top">		
+		<!--导航条,黑色样式,navbar-default是默认样式,navbar-fixed-top是表示始终在顶部,底部同理-->
+		<div class="container">
+		  <div class="navbar-header">
+			<a class="navbar-brand">Brand</a>
+				<button class="btn btn-default navbar-toggle" data-toggle="collapse" data-target="#myNav">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+			  </button>
+		  </div>
+		  <div class="navbar-collapse collapse" id="myNav">
+		    <ul class="nav navbar-nav">
+					<li class="active"><a>首页</a></li>
+					<li><a>产品</a></li>
+					<li class="dropdown">								
+							<a class="dropdown-toggle" data-toggle="dropdown">
+								下拉菜单
+							  <span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu">
+							  <li><a href="">aaa</a></li>
+								<li><a href="">bbb</a></li>
+								<li><a href="">ccc</a></li>
+							</ul>
+						</li>
+				</ul>
+		    <form action="" class="navbar-form navbar-left">		<!--导航条表单-->
+			  <div class="form-group">
+			    <input type="text" class="form-control">
+				  </div>
+				  <button class="btn btn-primary">提交</button>
+		    </form>
+			  <button class="btn btn-default navbar-btn navbar-left">Btn</button>	<!--导航条按钮-->
+			  <p class="navbar-text navbar-right">文本内容 <a class="navbar-link">链接</a></p> 	<!--导航条文本和链接-->
+		  </div>
+	  </div>
+	</nav>
+	<div class="container"><br>		<!--路径指导-->
+		<ol class="breadcrumb">
+			<li>首页</li>
+		</ol>
+		<ol class="breadcrumb">
+			<li><a>首页</a></li>
+			<li>子栏目1</li>
+		</ol>
+		<ol class="breadcrumb">
+			<li><a>首页</a></li>
+			<li><a>子栏目1</a></li>
+			<li>子栏目2</li>
+		</ol>
+	</div>
+<div class="container"><br>
+	<!--nav-pills是胶囊式,nav-stacked竖直排列,nav-justified左右平铺,占满一排-->
+<!--<ul class="nav nav-tabs nav-justified"> 	
+			<li class="active"><a>首页</a></li>
+			<li><a>产品</a></li>
+			<li class="disabled"><a>咨询</a></li>
+			<li><a>我们</a></li>
+			<li class="dropdown">								导航栏加入下拉列表
+						<a class="dropdown-toggle" data-toggle="dropdown">
+							下拉菜单
+						  <span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="">aaa</a></li>
+							<li><a href="">bbb</a></li>
+							<li><a href="">ccc</a></li>
+						</ul>
+					</li></ul>-->
+	
+</div>
+	1<br>2<br>3<br>4<br>5<br>6<br>
+	1<br>1<br>1<br>
+	1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>
+	1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>
+</body>
+</html>

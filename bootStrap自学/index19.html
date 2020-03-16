@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>提示工具</title>
+<link href="../static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<script src="../static/js/jquery.min.js"></script>
+<script src="../static/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<div class="container"><br><br>
+		<!--data-toggle="tooltip",data-animation="true"显示提示框,data-delay="10"表示延迟显示,data-html="true"表示解析HTML,data-placement="right",auto为自适应,表示从哪个方向显示提示框,data-title="我的标题"与title一样,优先级低于title,data-trigger="click"表示触发方式,默认是hover,换成点击后需点击才能显示取消,记得在JS里面调用$('[data-toggle="tooltip"]').tooltip();-->
+		<!--<a href="###" title="对面的<i>女孩</i>看过来" data-toggle="tooltip" data-animation="true" data-delay="10"
+		   data-html="true" data-placement="auto" data-title="我的标题" data-trigger="click">提示</a>-->
+		<p>
+		<a  href="##" title="对面的<i>女孩</i>看过来" data-toggle="tooltip">提示</a></p>
+		<p>
+			<button class="btn btn-primary" id="btn_show">show</button>
+			<button class="btn btn-primary" id="btn_hide">hide</button>
+			<button class="btn btn-primary" id="btn_toggle">toggle</button>
+			<button class="btn btn-primary" id="btn_destroy">destroy</button>
+		</p>
+	</div>
+	
+	<!--通过JS实现同样的效果-->
+	<script>
+		var tooltip=$('[data-toggle="tooltip"]');
+		tooltip.tooltip({
+			//delay:1000
+			delay:{
+				show:1000, /*显示1S,消失0秒*/
+				hide:0
+			},
+			html:true
+		}).on('show.bs.tooltip',function(){
+			alert("show");		/*监听事件,显示的时候*/
+		})
+		/*通过按钮控制提示框,destroy表示鼠标悬停无法显示*/
+		$("#btn_show").click(function(){
+			tooltip.tooltip('show');
+		});
+		$("#btn_hide").click(function(){
+			tooltip.tooltip('hide');
+		});
+		$("#btn_toggle").click(function(){
+			tooltip.tooltip('toggle');
+		});
+		$("#btn_destroy").click(function(){
+			tooltip.tooltip('destroy');
+		});
+	</script>
+</body>
+</html>

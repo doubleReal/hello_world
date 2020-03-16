@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>图标_下拉菜单_按钮</title>
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css"></head>
+<script src="../static/js/jquery.min.js"></script>
+<script src="../static/js/bootstrap.min.js"></script>
+<body>
+<div class="container"><br>     <!--代表不同的图标,可以通过text-danger来改变颜色,可以改变大小-->
+    <!--<i class="glyphicon glyphicon-asterisk"></i>
+    <i class="glyphicon glyphicon-asterisk text-danger"></i>
+    <i class="glyphicon glyphicon-asterisk text-danger" style="font-size: 26px;"></i>
+    <i class="glyphicon glyphicon-star"></i>
+    <span class="glyphicon glyphicon-star"></span>
+    <p class="glyphicon glyphicon-star"></p>
+    <div class="glyphicon glyphicon-star"></div>-->
+
+    <!--<button class="btn btn-default btn-lg">         &lt;!&ndash;按钮内置图标,可以随按钮变化&ndash;&gt;
+        <i class="glyphicon glyphicon-star"></i>
+        star
+    </button>-->
+
+    <!--<div class="dropdown">      &lt;!&ndash;下拉式菜单,<div class="dropdoup open">向上显示,默认打开&ndash;&gt;
+        <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+            dropdown
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu ">  &lt;!&ndash;dropdown-menu-right下拉列表会向右对齐&ndash;&gt;
+            <li class="dropdown-header"><a href="">aaa</a></li>    &lt;!&ndash; dropdown-header代表下拉标题&ndash;&gt;
+            <li><a href="">aaa</a></li>
+            <li><a href="">bbb</a></li>
+            <li class="divider"></li>           &lt;!&ndash;分割线&ndash;&gt;
+            <li><a href="">ccc</a></li>
+            <li class="disabled"><a href="">ccc</a></li>        &lt;!&ndash;disabled禁用选项&ndash;&gt;
+            <li class="active"><a href="">ccc</a></li>      &lt;!&ndash;active激活状态&ndash;&gt;
+        </ul>
+    </div>-->
+
+    <!--<div class="btn-toolbar">       &lt;!&ndash;按钮组样式,btn-lg等调大小&ndash;&gt;
+    <div class="btn-group">
+        <button class="btn btn-default">左</button>
+        <button class="btn btn-default">中</button>
+        <button class="btn btn-default">中2</button>
+        <button class="btn btn-default">右</button>
+    </div>
+        <div class="btn-group">
+            <button class="btn btn-default btn-lg">B</button>
+            <button class="btn btn-default btn-sm">I</button>
+            <button class="btn btn-default btn-xs">U</button>
+        </div>
+    </div>-->
+
+    <!--<div class="btn-group btn-group-vertical">             &lt;!&ndash;嵌入式,将按钮,btn-group-vertical代表垂直排列&ndash;&gt;
+        <button class="btn btn-default">左</button>
+        <button class="btn btn-default">中</button>
+        <button class="btn btn-default">中2</button>
+        <button class="btn btn-default">右</button>
+        <div class="btn-group">
+            <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                dropdown
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu ">
+                <li class="dropdown-header"><a href="">aaa</a></li>
+                <li><a href="">aaa</a></li>
+                <li><a href="">bbb</a></li>
+                <li class="divider"></li>
+                <li><a href="">ccc</a></li>
+                <li class="disabled"><a href="">ccc</a></li>
+                <li class="active"><a href="">ccc</a></li>
+            </ul>
+        </div>
+    </div>-->
+
+    <!--<div class="btn-group btn-group-justified">     &lt;!&ndash;a标签可水平排列&ndash;&gt;
+        <a class="btn btn-default">左</a>
+        <a class="btn btn-default">中</a>
+        <a class="btn btn-default">中2</a>
+        <a class="btn btn-default">右</a>
+    </div>-->
+
+    <div class="btn-group">             <!--必须放在btn-group里,可以用btn-success调整颜色,这是分列式下拉按钮的写法-->
+        <button class="btn btn-success btn-lg">     <!--btn-lg同时加上-->
+            dropdown
+        </button>
+        <button class="btn btn-success dropdown-toggle btn-lg" data-toggle="dropdown">
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu ">
+            <li class="dropdown-header"><a href="">aaa</a></li>
+            <li><a href="">aaa</a></li>
+            <li><a href="">bbb</a></li>
+            <li class="divider"></li>
+            <li><a href="">ccc</a></li>
+            <li class="disabled"><a href="">ccc</a></li>
+            <li class="active"><a href="">ccc</a></li>
+        </ul>
+    </div>
+
+</div>
+
+</body>
+</html>
