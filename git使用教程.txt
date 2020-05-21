@@ -121,4 +121,7 @@ git+github的完整使用步骤:
    git push -u origin master <br>
 10.更新项目
 git pull origin master
+
+11.从github拉取项目
+git clone 项目链接
 </h4>
